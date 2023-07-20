@@ -1,0 +1,802 @@
+<!DOCTYPE html>
+<html>
+    <!-- Start Head -->
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>E-commerce Website</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="/home/karthikeyan/Documents/startup-e-commerce-website/css/topnavbar.css">
+        <link rel="stylesheet" href="/home/karthikeyan/Documents/startup-e-commerce-website/css/sidenavbar.css">
+        <link rel="stylesheet" href="/home/karthikeyan/Documents/startup-e-commerce-website/product/product_css/fruits_category.css">
+        <link rel="stylesheet" href="/home/karthikeyan/Documents/startup-e-commerce-website/css/footer.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+        <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css">
+    </head>
+    <!-- End Head -->
+    <!-- Start Body -->
+    <body>
+        <main>
+            <!-- Start Topnavbar -->
+            <div class="topnav">
+                <nav class="topnavbar-section">
+                    <div>
+                        <h1>CREATIVE THINKS!</h1>
+                    </div>
+                    <div class="search-container">
+                        <input type="text" id="search-input" placeholder="Search Products...">
+                        <button id="search-button">Search</button>
+                    </div>
+                    <div class="cart" on-click=""showCartPopup()>
+                        <a href="#">
+                            <i class="fas fa-shopping-cart shopping-cart-icon"></i>
+                            <span class="cart-count">0</span>
+                        </a>
+                    </div>
+                    <!-- Cart Pop-up/Modal -->
+                    <div id="cartPopup" class="cart-popup">
+                        <div class="cart-content">
+                        <h2>Cart</h2>
+                        <div id="cartItems"></div>
+                        <div class="cart-actions">
+                            <button onclick="checkout()">Checkout</button>
+                            <button onclick="closeCartPopup()">Close</button>
+                        </div>
+                        </div>
+                    </div>
+                    <div class="signup-login-section">
+                        <a class="cta" href="/home/karthikeyan/Documents/startup-e-commerce-website/signup_page.html"><button type="submit" class="btn btn-primary btn-block">SIGNUP</button></a>
+                        <a class="cta" href="/home/karthikeyan/Documents/startup-e-commerce-website/login_page.html"><button type="submit" class="btn btn-primary btn-block">LOGIN</button></a>
+                    </div>
+                </nav>
+            </div>
+            <!-- End Topnavbar -->
+            <!-- Start Sidenavbar -->
+            <div class="sidenavbar-section">
+                <nav class="sidenav" onmouseover="showScrollbar()" onmouseout="hideScrollbar()">
+                    <ul>
+                        <div>
+                            <li class="logo">
+                                <img src="/home/karthikeyan/Documents/startup-e-commerce-website/images/logo1.png" alt="">
+                            </li>
+                        </div>
+                        <div>
+                            <li>
+                                <a href="#">
+                                    <i class="fas fa-home"></i>
+                                    <span class="nav-item">HOME</span>
+                                </a>
+                            </li>
+                        </div>
+                        <div>
+                            <li>
+                                <a href="#">
+                                    <i class="fas fa-user"></i>
+                                    <span class="nav-item">PROFILES</span>
+                                </a>
+                            </li>
+                        </div>
+                        <div>
+                            <li>
+                                <a href="#">
+                                    <i class="fas fa-carrot"></i>
+                                    <span class="nav-item">VEGETABLES</span>
+                                </a>
+                            </li>
+                        </div>
+                        <div>
+                            <li>
+                                <a href="#">
+                                    <i class="fas fa-apple-alt"></i>
+                                    <span class="nav-item">FRUITS</span>
+                                </a>
+                            </li>
+                        </div>
+                        <div>
+                            <li>
+                                <a href="#">
+                                    <i class="fas fa-eye"></i>
+                                    <span class="nav-item">COSMETICS</span>
+                                </a>
+                            </li>
+                        </div>
+                        <div>
+                            <li>
+                                <a href="#">
+                                    <i class="fas fa-shopping-cart"></i>
+                                    <span class="nav-item">GROCERY</span>
+                                </a>
+                            </li>
+                        </div>
+                        <div>
+                            <li>
+                                <a href="#">
+                                    <i class="fas fa-desktop"></i>
+                                    <span class="nav-item">MOBILES & LAPTOPS</span>
+                                </a>
+                            </li>
+                        </div>
+                        <div>
+                            <li>
+                                <a href="#">
+                                    <i class="fas fa-pen"></i>
+                                    <span class="nav-item">FANCY & STATIONERY</span>
+                                </a>
+                            </li>
+                        </div>
+                        <div>
+                            <li>
+                                <a href="#">
+                                    <i class="fas fa-coffee"></i>
+                                    <span class="nav-item">DAIRY PRODUCTS</span>
+                                </a>
+                            </li>
+                        </div>
+                        <div>
+                            <li>
+                                <a href="#">
+                                    <i class="fas fa-microchip"></i>
+                                    <span class="nav-item">ELECTRONIC ITEMS</span>
+                                </a>
+                            </li>
+                        </div>
+                        <div>
+                            <li>
+                                <a href="#">
+                                    <i class="fas fa-book"></i>
+                                    <span class="nav-item">BOOKS</span>
+                                </a>
+                            </li>
+                        </div>
+                        <div>
+                            <li>
+                                <a href="#">
+                                    <i class="fas fa-cog"></i>
+                                    <span class="nav-item">SETTINGS</span>
+                                </a>
+                            </li>
+                        </div>
+                        <div>
+                            <li>
+                                <a href="#" class="logout">
+                                    <i class="fas fa-sign-out-alt"></i>
+                                    <span class="nav-item">LOGOUT</span>
+                                </a>
+                            </li>
+                        </div>
+                    </ul>
+                </nav>
+            </div>
+            <!-- End Sidenavbar -->
+            <!-- Start Products Card -->
+            <div class="products">
+                <main class="cards">
+                    <div class="row">
+                        <div class="col">
+                            <div class="product-card">
+                                <!-- Product 1 -->
+                                <img src="test1.png" alt="">
+                                <h1 class="product-title">Tomato</h1>
+                                <p class="product-price">Rs.100</p>
+                                <div class="buttons">
+                                    <button class="add-to-cart">Add to Cart</button>
+                                    <button class="buy-now">Buy Now</button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col">
+                            <div class="product-card">
+                                <!-- Product 2 -->
+                                <img src="test2.png" alt="">
+                                <h1 class="product-title">Bottle Gourd</h1>
+                                <p class="product-price">Rs.70</p>
+                                <div class="buttons">
+                                    <button class="add-to-cart">Add to Cart</button>
+                                    <button class="buy-now">Buy Now</button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col">
+                            <div class="product-card">
+                                <!-- Product 3 -->
+                                <img src="test3.png" alt="">
+                                <h1 class="product-title">Potato</h1>
+                                <p class="product-price">Rs.60</p>
+                                <div class="buttons">
+                                    <button class="add-to-cart">Add to Cart</button>
+                                    <button class="buy-now">Buy Now</button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col">
+                            <div class="product-card">
+                                <!-- Product 4 -->
+                                <img src="test4.png" alt="">
+                                <h1 class="product-title">Pea</h1>
+                                <p class="product-price">Rs.30</p>
+                                <div class="buttons">
+                                    <button class="add-to-cart">Add to Cart</button>
+                                    <button class="buy-now">Buy Now</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col">
+                            <!-- Product 5 -->
+                            <div class="product-card">
+                                <img src="test5.png" alt="">
+                                <h1 class="product-title">Green Chilli</h1>
+                                <p class="product-price">Rs.20</p>
+                                <div class="buttons">
+                                  <button class="add-to-cart">Add to Cart</button>
+                                  <button class="buy-now">Buy Now</button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col">
+                            <!-- Product 6 -->
+                            <div class="product-card">
+                                <img src="test6.png" alt="">
+                                <h1 class="product-title">Onion</h1>
+                                <p class="product-price">Rs.30</p>
+                                <div class="buttons">
+                                  <button class="add-to-cart">Add to Cart</button>
+                                  <button class="buy-now">Buy Now</button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col">
+                            <!-- Product 7 -->
+                            <div class="product-card">
+                                <img src="test7.png" alt="">
+                                <h1 class="product-title">Cucumber</h1>
+                                <p class="product-price">Rs.20</p>
+                                <div class="buttons">
+                                  <button class="add-to-cart">Add to Cart</button>
+                                  <button class="buy-now">Buy Now</button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col">
+                            <!-- Product 8 -->
+                            <div class="product-card">
+                                <img src="test8.png" alt="">
+                                <h1 class="product-title">Cauliflower</h1>
+                                <p class="product-price">Rs.30</p>
+                                <div class="buttons">
+                                  <button class="add-to-cart">Add to Cart</button>
+                                  <button class="buy-now">Buy Now</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col">
+                            <!-- Product 9 -->
+                            <div class="product-card">
+                                <img src="test9.png" alt="">
+                                <h1 class="product-title">Bitter Gourd</h1>
+                                <p class="product-price">Rs.40</p>
+                                <div class="buttons">
+                                  <button class="add-to-cart">Add to Cart</button>
+                                  <button class="buy-now">Buy Now</button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col">
+                            <!-- Product 10 -->
+                            <div class="product-card">
+                                <img src="test10.png" alt="">
+                                <h1 class="product-title">Pointed Gourd</h1>
+                                <p class="product-price">Rs.45</p>
+                                <div class="buttons">
+                                  <button class="add-to-cart">Add to Cart</button>
+                                  <button class="buy-now">Buy Now</button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col">
+                            <!-- Product 11 -->
+                            <div class="product-card">
+                                <img src="test11.png" alt="">
+                                <h1 class="product-title">Cabbage</h1>
+                                <p class="product-price">Rs.35</p>
+                                <div class="buttons">
+                                  <button class="add-to-cart">Add to Cart</button>
+                                  <button class="buy-now">Buy Now</button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col">
+                            <!-- Product 12 -->
+                            <div class="product-card">
+                                <img src="test12.png" alt="">
+                                <h1 class="product-title">Beat-Root</h1>
+                                <p class="product-price">Rs.25</p>
+                                <div class="buttons">
+                                  <button class="add-to-cart">Add to Cart</button>
+                                  <button class="buy-now">Buy Now</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col">
+                            <!-- Product 13 -->
+                            <div class="product-card card">
+                                <img src="test13.png" alt="">
+                                <h1 class="product-title">Bean</h1>
+                                <p class="product-price">Rs.10</p>
+                                <div class="buttons">
+                                  <button class="add-to-cart">Add to Cart</button>
+                                  <button class="buy-now">Buy Now</button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col">
+                            <!-- Product 14 -->
+                            <div class="product-card">
+                                <img src="test14.png" alt="">
+                                <h1 class="product-title">Ridge Gourd</h1>
+                                <p class="product-price">Rs.30</p>
+                                <div class="buttons">
+                                  <button class="add-to-cart">Add to Cart</button>
+                                  <button class="buy-now">Buy Now</button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col">
+                            <!-- Product 15 -->
+                            <div class="product-card">
+                                <img src="test15.png" alt="">
+                                <h1 class="product-title">Sponge Gourd</h1>
+                                <p class="product-price">Rs.25</p>
+                                <div class="buttons">
+                                  <button class="add-to-cart">Add to Cart</button>
+                                  <button class="buy-now">Buy Now</button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col">
+                            <!-- Product 16 -->
+                            <div class="product-card">
+                                <img src="test16.png" alt="">
+                                <h1 class="product-title">Ginger</h1>
+                                <p class="product-price">Rs.10</p>
+                                <div class="buttons">
+                                  <button class="add-to-cart">Add to Cart</button>
+                                  <button class="buy-now">Buy Now</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col">
+                            <!-- Product 17 -->
+                            <div class="product-card">
+                                <img src="test17.png" alt="">
+                                <h1 class="product-title">Capsicum</h1>
+                                <p class="product-price">Rs.25</p>
+                                <div class="buttons">
+                                  <button class="add-to-cart">Add to Cart</button>
+                                  <button class="buy-now">Buy Now</button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col">
+                            <!-- Product 18 -->
+                            <div class="product-card">
+                                <img src="test18.png" alt="">
+                                <h1 class="product-title">Pumpkin</h1>
+                                <p class="product-price">Rs.35</p>
+                                <div class="buttons">
+                                  <button class="add-to-cart">Add to Cart</button>
+                                  <button class="buy-now">Buy Now</button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col">
+                            <!-- Product 19 -->
+                            <div class="product-card">
+                                <img src="test19.png" alt="">
+                                <h1 class="product-title">Brinjal</h1>
+                                <p class="product-price">Rs.30</p>
+                                <div class="buttons">
+                                  <button class="add-to-cart">Add to Cart</button>
+                                  <button class="buy-now">Buy Now</button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col">
+                            <!-- Product 20 -->
+                            <div class="product-card">
+                                <img src="test20.png" alt="">
+                                <h1 class="product-title">Spinach</h1>
+                                <p class="product-price">Rs.25</p>
+                                <div class="buttons">
+                                  <button class="add-to-cart">Add to Cart</button>
+                                  <button class="buy-now">Buy Now</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col">
+                            <!-- Product 21 -->
+                            <div class="product-card">
+                                <img src="test21.png" alt="">
+                                <h1 class="product-title">Coriander Leaf</h1>
+                                <p class="product-price">Rs.10</p>
+                                <div class="buttons">
+                                  <button class="add-to-cart">Add to Cart</button>
+                                  <button class="buy-now">Buy Now</button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col">
+                            <!-- Product 22 -->
+                            <div class="product-card">
+                                <img src="test22.png" alt="">
+                                <h1 class="product-title">Round Melon</h1>
+                                <p class="product-price">Rs.50</p>
+                                <div class="buttons">
+                                  <button class="add-to-cart">Add to Cart</button>
+                                  <button class="buy-now">Buy Now</button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col">
+                            <!-- Product 23 -->
+                            <div class="product-card">
+                                <img src="test23.png" alt="">
+                                <h1 class="product-title">Colocasia Root</h1>
+                                <p class="product-price">Rs.20</p>
+                                <div class="buttons">
+                                  <button class="add-to-cart">Add to Cart</button>
+                                  <button class="buy-now">Buy Now</button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col">
+                            <!-- Product 24 -->
+                            <div class="product-card">
+                                <img src="test24.png" alt="">
+                                <h1 class="product-title">Turnips</h1>
+                                <p class="product-price">Rs.30</p>
+                                <div class="buttons">
+                                  <button class="add-to-cart">Add to Cart</button>
+                                  <button class="buy-now">Buy Now</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col">
+                            <!-- Product 25 -->
+                            <div class="product-card">
+                                <img src="test25.png" alt="">
+                                <h1 class="product-title">Mushroom</h1>
+                                <p class="product-price">Rs.30</p>
+                                <div class="buttons">
+                                  <button class="add-to-cart">Add to Cart</button>
+                                  <button class="buy-now">Buy Now</button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col">
+                            <!-- Product 26 -->
+                            <div class="product-card">
+                                <img src="test26.png" alt="">
+                                <h1 class="product-title">Garlic</h1>
+                                <p class="product-price">Rs.60</p>
+                                <div class="buttons">
+                                  <button class="add-to-cart">Add to Cart</button>
+                                  <button class="buy-now">Buy Now</button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col">
+                            <!-- Product 27 -->
+                            <div class="product-card">
+                                <img src="test27.png" alt="">
+                                <h1 class="product-title">Green Onion</h1>
+                                <p class="product-price">Rs.30</p>
+                                <div class="buttons">
+                                  <button class="add-to-cart">Add to Cart</button>
+                                  <button class="buy-now">Buy Now</button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col">
+                            <!-- Product 28 -->
+                            <div class="product-card">
+                                <img src="test28.png" alt="">
+                                <h1 class="product-title">Radish</h1>
+                                <p class="product-price">Rs.35</p>
+                                <div class="buttons">
+                                  <button class="add-to-cart">Add to Cart</button>
+                                  <button class="buy-now">Buy Now</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col">
+                            <!-- Product 29 -->
+                            <div class="product-card">
+                                <img src="test29.png" alt="">
+                                <h1 class="product-title">Mint</h1>
+                                <p class="product-price">Rs.10</p>
+                                <div class="buttons">
+                                  <button class="add-to-cart">Add to Cart</button>
+                                  <button class="buy-now">Buy Now</button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col">
+                            <!-- Product 30 -->
+                            <div class="product-card">
+                                <img src="test30.png" alt="">
+                                <h1 class="product-title">Soy Beans</h1>
+                                <p class="product-price">Rs.25</p>
+                                <div class="buttons">
+                                  <button class="add-to-cart">Add to Cart</button>
+                                  <button class="buy-now">Buy Now</button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col">
+                            <!-- Product 31 -->
+                            <div class="product-card">
+                                <img src="test31.png" alt="">
+                                <h1 class="product-title">Green-Mustard</h1>
+                                <p class="product-price">Rs.20</p>
+                                <div class="buttons">
+                                  <button class="add-to-cart">Add to Cart</button>
+                                  <button class="buy-now">Buy Now</button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col">
+                            <!-- Product 32 -->
+                            <div class="product-card">
+                                <img src="test32.png" alt="">
+                                <h1 class="product-title">Wild Spinach</h1>
+                                <p class="product-price">Rs.30</p>
+                                <div class="buttons">
+                                  <button class="add-to-cart">Add to Cart</button>
+                                  <button class="buy-now">Buy Now</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col">
+                            <!-- Product 33 -->
+                            <div class="product-card">
+                                <img src="test33.png" alt="">
+                                <h1 class="product-title">Kidney Beans</h1>
+                                <p class="product-price">Rs.25</p>
+                                <div class="buttons">
+                                  <button class="add-to-cart">Add to Cart</button>
+                                  <button class="buy-now">Buy Now</button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col">
+                            <!-- Product 34 -->
+                            <div class="product-card">
+                                <img src="test34.png" alt="">
+                                <h1 class="product-title">Drumstick</h1>
+                                <p class="product-price">Rs.20</p>
+                                <div class="buttons">
+                                  <button class="add-to-cart">Add to Cart</button>
+                                  <button class="buy-now">Buy Now</button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col">
+                            <!-- Product 35 -->
+                            <div class="product-card">
+                                <img src="test35.png" alt="">
+                                <h1 class="product-title">Curry Leaves</h1>
+                                <p class="product-price">Rs.20</p>
+                                <div class="buttons">
+                                  <button class="add-to-cart">Add to Cart</button>
+                                  <button class="buy-now">Buy Now</button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col">
+                            <!-- Product 36 -->
+                            <div class="product-card">
+                                <img src="test36.png" alt="">
+                                <h1 class="product-title">Tamarind</h1>
+                                <p class="product-price">Rs.50</p>
+                                <div class="buttons">
+                                  <button class="add-to-cart">Add to Cart</button>
+                                  <button class="buy-now">Buy Now</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col">
+                            <!-- Product 37 -->
+                            <div class="product-card">
+                                <img src="test37.png" alt="">
+                                <h1 class="product-title">Raw Mango</h1>
+                                <p class="product-price">Rs.60</p>
+                                <div class="buttons">
+                                  <button class="add-to-cart">Add to Cart</button>
+                                  <button class="buy-now">Buy Now</button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col">
+                            <!-- Product 38 -->
+                            <div class="product-card">
+                                <img src="test38.png" alt="">
+                                <h1 class="product-title">Corn</h1>
+                                <p class="product-price">Rs.50</p>
+                                <div class="buttons">
+                                  <button class="add-to-cart">Add to Cart</button>
+                                  <button class="buy-now">Buy Now</button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col">
+                            <!-- Product 39 -->
+                            <div class="product-card">
+                                <img src="test39.png" alt="">
+                                <h1 class="product-title">Baby Corn</h1>
+                                <p class="product-price">Rs.40</p>
+                                <div class="buttons">
+                                  <button class="add-to-cart">Add to Cart</button>
+                                  <button class="buy-now">Buy Now</button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col">
+                            <!-- Product 40 -->
+                            <div class="product-card">
+                                <img src="test40.png" alt="">
+                                <h1 class="product-title">Lady's Finger</h1>
+                                <p class="product-price">Rs.25</p>
+                                <div class="buttons">
+                                  <button class="add-to-cart">Add to Cart</button>
+                                  <button class="buy-now">Buy Now</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </main>
+            </div>
+            <!-- End Products Card -->
+            <!-- Start Footer -->
+            <div class="footer-section">
+                <footer class="footer">
+                    <div class="container">
+                        <div class="row">
+                            <div class="footer-col">
+                                <h4>COMPANY</h4>
+                                <ul>
+                                    <li>
+                                        <a href="#">About Us</a>
+                                    </li>
+                                    <li>
+                                        <a href="#">Our Services</a>
+                                    </li>
+                                    <li>
+                                        <a href="#">Privacy Policy</a>
+                                    </li>
+                                    <li>
+                                        <a href="#">Affliate Program</a>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="footer-col">
+                                <h4>GET HELP</h4>
+                                <ul>
+                                    <li>
+                                        <a href="#">FAQ</a>
+                                    </li>
+                                    <li>
+                                        <a href="#">Shipping</a>
+                                    </li>
+                                    <li>
+                                        <a href="#">Returns</a>
+                                    </li>
+                                    <li>
+                                        <a href="#">Order Status</a>
+                                    </li>
+                                    <li>
+                                        <a href="#">Payment Options</a>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="footer-col">
+                                <h4>ONLINE SHOP</h4>
+                                <ul>
+                                    <li>
+                                        <a href="#">
+                                            <i class="fas fa-carrot"></i>
+                                            <span class="nav-item">vegetables</span>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#">
+                                            <i class="fas fa-apple-alt"></i>
+                                            <span class="nav-item">Fruits</span>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#">
+                                            <i class="fas fa-eye"></i>
+                                            <span class="nav-item">Cosmetics</span>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#">
+                                            <i class="fas fa-shopping-cart"></i>
+                                            <span class="nav-item">Grocery</span>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#">
+                                            <i class="fas fa-desktop"></i>
+                                            <span class="nav-item">Mobiles & Laptops</span>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#">
+                                            <i class="fas fa-pen"></i>
+                                            <span class="nav-item">Fancy & Stationery</span>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#">
+                                            <i class="fas fa-coffee"></i>
+                                            <span class="nav-item">Dairy Products</span>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#">
+                                            <i class="fas fa-microchip"></i>
+                                            <span class="nav-item">Electronic Items</span>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#">
+                                            <i class="fas fa-book"></i>
+                                            <span class="nav-item">Books</span>
+                                        </a>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="footer-col">
+                                <h4>FOLLOW US</h4>
+                                <div class="social-links">
+                                    <a href="#"><i class="fab fa-facebook-f"></i></a>
+                                    <a href="#"><i class="fab fa-twitter"></i></a>
+                                    <a href="#"><i class="fab fa-instagram"></i></a>
+                                    <a href="#"><i class="fab fa-linkedin"></i></a>
+                                    <a href="#"><i class="fab fa-whatsapp"></i></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </footer>
+            </div>
+            <!-- End Footer -->
+        </main>
+        <!-- Javascript -->
+        <script src="/home/karthikeyan/Documents/startup-e-commerce-website/js/cart_pop.js" async defer></script>
+        <script src="/home/karthikeyan/Documents/startup-e-commerce-website/product/product_category/product_js/fruits_category.js" async defer></script>
+        <script src="/home/karthikeyan/Documents/startup-e-commerce-website/js/sidenavbar_scroll.js" async defer></script>
+    </body>
+    <!-- End Body -->
+</html>

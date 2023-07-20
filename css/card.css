@@ -1,0 +1,72 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@600&display=swap');
+.card *{
+    margin: 0;
+    padding: 0;
+}
+.txt{
+    color: aliceblue;
+}
+.card{
+    display: inline-block;
+    border-radius: 10px;
+    padding: 15px 25px;
+    box-sizing: border-box;
+    cursor:pointer;
+    margin: 10px 15px;
+    background-position: center;
+    background-size: cover;
+    max-height: calc(100vh - 60px);
+    overflow-y: auto;
+    transition: transform 0.3s;
+}
+.card1{
+    width: 415px;
+    height: 250px;
+    margin-left: 110px;
+    background-image: linear-gradient(rgba(0,0,0,0.7),rgba(0,0,0,0.7)),url("/home/karthikeyan/Documents/startup-e-commerce-website/images/card images/img-card1.png");
+}
+.card2{
+    width: 415px;
+    height: 250px;
+    background-image: linear-gradient(rgba(0,0,0,0.7),rgba(0,0,0,0.7)),url("/home/karthikeyan/Documents/startup-e-commerce-website/images/card images/img-card2.png");
+}
+.card3{
+    width: 415px;
+    height: 250px;
+    background-image: linear-gradient(rgba(0,0,0,0.7),rgba(0,0,0,0.7)),url("/home/karthikeyan/Documents/startup-e-commerce-website/images/card images/img-card3.png");
+}
+.card4{
+    width: 415px;
+    height: 250px;
+    margin-left: 110px;
+    background-image: linear-gradient(rgba(0,0,0,0.7),rgba(0,0,0,0.7)),url("/home/karthikeyan/Documents/startup-e-commerce-website/images/card images/img-card4.png");
+}
+.card5{
+    width: 415px;
+    height: 250px;
+    background-image: linear-gradient(rgba(0,0,0,0.7),rgba(0,0,0,0.7)),url("/home/karthikeyan/Documents/startup-e-commerce-website/images/card images/img-card5.png");
+}
+.card6{
+    width: 415px;
+    height: 250px;
+    background-image: linear-gradient(rgba(0,0,0,0.7),rgba(0,0,0,0.7)),url("/home/karthikeyan/Documents/startup-e-commerce-website/images/card images/img-card6.png");
+}
+.card7{
+    width: 415px;
+    height: 250px;
+    margin-left: 110px;
+    background-image: linear-gradient(rgba(0,0,0,0.7),rgba(0,0,0,0.7)),url("/home/karthikeyan/Documents/startup-e-commerce-website/images/card images/img-card7.png");
+}
+.card8{
+    width: 415px;
+    height: 250px;
+    background-image: linear-gradient(rgba(0,0,0,0.7),rgba(0,0,0,0.7)),url("/home/karthikeyan/Documents/startup-e-commerce-website/images/card images/img-card8.png");
+}
+.card9{
+    width: 415px;
+    height: 250px;
+    background-image: linear-gradient(rgba(0,0,0,0.7),rgba(0,0,0,0.7)),url("/home/karthikeyan/Documents/startup-e-commerce-website/images/card images/img-card9.png");
+}
+.card:hover{
+    transform: translateX(-10px);
+}

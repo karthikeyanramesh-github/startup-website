@@ -1,0 +1,104 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@600&display=swap');
+.sidenav *{
+    margin:0;
+    padding: 0;
+    outline:none;
+    border:none;
+    text-decoration: none;
+    box-sizing: border-box;
+}
+.sidenav{
+    z-index: 999;
+    top: 0;
+    bottom: 0;
+    height: 100%;
+    left: 0;
+    width: 90px;
+    overflow: hidden;
+    overflow-y: hidden;
+    transition: width 0.2s linear;
+    backdrop-filter: blur(40px);
+    box-shadow: 0 8px 32px 0 rgba(0,0,0,0.37);
+    -webkit-backdrop-filter: blur(40px);
+    background: linear-gradient(135deg,rgba(255,255,255,0.1),rgba(255,255,255,0));
+    background-image: linear-gradient(rgba(0,0,0,0.7),rgba(0,0,0,0.7));
+    position: fixed;
+}
+.show-scrollbar {
+    overflow-y: auto;
+}
+.show-scrollbar::-webkit-scrollbar {
+    width: 10px;
+    height: 10px;
+}
+.sidenav::-webkit-scrollbar-track {
+    background-color: #f1f1f1;
+}
+.sidenav::-webkit-scrollbar-thumb {
+    background-color: #888;
+}
+.sidenav::-webkit-scrollbar-thumb:hover {
+    background-color: #555;
+}
+.show-scrollbar::-webkit-scrollbar-track {
+    background-color: #f1f1f1;
+}
+.show-scrollbar::-webkit-scrollbar-thumb {
+    background-color: #888;
+} 
+.show-scrollbar::-webkit-scrollbar-thumb:hover {
+    background-color: #555;
+}
+  
+.sidenav .logo{
+    text-align: center;
+    display: flex;
+    width: 100px;
+    margin: 10px 0 0 10px;
+    align-items: center;
+}
+.sidenav .logo img{
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+}
+.sidenav .logo span{
+    font-family: bold;
+    padding-left: 15px;
+    font-size: 18px;
+    text-transform: uppercase;
+    justify-content: center;
+}
+.sidenav a{
+    position:relative;
+    color:rgb(255, 255, 255);
+    font-size: 14px;
+    display: table;
+    width: 300px;
+    padding: 10px;
+}
+.sidenav .fas{
+    position: relative;
+    width: 70px;
+    height: 40px;
+    top: 14px;
+    font-size: 20px;
+    text-align: center;
+}
+.sidenav .nav-item{
+    position: relative;
+    top:12px;
+    margin-left: 10px;
+}
+.sidenav a:hover{
+    background: #554c4c;
+}
+.sidenav:hover{
+    width: 280px;
+    transition: all 0.3s ease;
+}
+.sidenav ul li .logout{
+    position: relative;
+    bottom: 0%;
+}
+

@@ -1,0 +1,367 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>E-commerce Website</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="/home/karthikeyan/Documents/startup-e-commerce-website/css/after_login_topnavbar.css">
+        <link rel="stylesheet" href="/home/karthikeyan/Documents/startup-e-commerce-website/css/sidenavbar.css">
+        <link rel="stylesheet" href="/home/karthikeyan/Documents/startup-e-commerce-website/css/footer.css">
+        <link rel="stylesheet" href="/home/karthikeyan/Documents/startup-e-commerce-website/css/card.css">
+        <link rel="stylesheet" href="/home/karthikeyan/Documents/startup-e-commerce-website/css/slideshow.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+        <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css">
+    </head>
+    <body>
+        <main>
+            <div class="topnav">
+                <nav class="topnavbar-section">
+                    <div>
+                        <h1>CREATIVE THINKS!</h1>
+                    </div>
+                    <div class="search-container">
+                        <input type="text" id="search-input" placeholder="Search Products...">
+                        <button id="search-button">Search</button>
+                    </div>
+                    <div class="welcome-txt">
+                        <h2>Welcome! Viewers</h2>
+                    </div>
+                    <div class="cart" on-click=""showCartPopup()>
+                        <a href="#">
+                            <i class="fas fa-shopping-cart shopping-cart-icon"></i>
+                            <span class="cart-count">0</span>
+                        </a>
+                    </div>
+                    <div class="menu-toggle" onclick="toggleMenu()">
+                        <div class="bar"></div>
+                        <div class="bar"></div>
+                        <div class="bar"></div>
+                    </div>                  
+                </nav>
+            </div>
+            <h2><marquee style="color: antiquewhite; scroll-behavior: smooth; margin-top: 6rem;" class="">CREATIVE THINK! : Available for all Items from Chennai and New Drop Available 25% Offer</marquee></h2>      
+            <br>
+            <div class="sidenavbar-section">
+                <nav class="sidenav" onmouseover="showScrollbar()" onmouseout="hideScrollbar()">
+                    <ul>
+                        <div>
+                            <li class="logo">
+                                <img src="/home/karthikeyan/Documents/startup-e-commerce-website/images/logo1.png" alt="">
+                            </li>
+                        </div>
+                        <div>
+                            <li>
+                                <a href="#">
+                                    <i class="fas fa-home"></i>
+                                    <span class="nav-item">HOME</span>
+                                </a>
+                            </li>
+                        </div>
+                        <div>
+                            <li>
+                                <a href="#">
+                                    <i class="fas fa-user"></i>
+                                    <span class="nav-item">PROFILES</span>
+                                </a>
+                            </li>
+                        </div>
+                        <div>
+                            <li>
+                                <a href="#">
+                                    <i class="fas fa-carrot"></i>
+                                    <span class="nav-item">VEGETABLES</span>
+                                </a>
+                            </li>
+                        </div>
+                        <div>
+                            <li>
+                                <a href="#">
+                                    <i class="fas fa-apple-alt"></i>
+                                    <span class="nav-item">FRUITS</span>
+                                </a>
+                            </li>
+                        </div>
+                        <div>
+                            <li>
+                                <a href="#">
+                                    <i class="fas fa-eye"></i>
+                                    <span class="nav-item">COMESTICS</span>
+                                </a>
+                            </li>
+                        </div>
+                        <div>
+                            <li>
+                                <a href="#">
+                                    <i class="fas fa-shopping-cart"></i>
+                                    <span class="nav-item">GROCERY</span>
+                                </a>
+                            </li>
+                        </div>
+                        <div>
+                            <li>
+                                <a href="#">
+                                    <i class="fas fa-desktop"></i>
+                                    <span class="nav-item">MOBILES & LAPTOPS</span>
+                                </a>
+                            </li>
+                        </div>
+                        <div>
+                            <li>
+                                <a href="#">
+                                    <i class="fas fa-pen"></i>
+                                    <span class="nav-item">FANCY & STATIONERY</span>
+                                </a>
+                            </li>
+                        </div>
+                        <div>
+                            <li>
+                                <a href="#">
+                                    <i class="fas fa-coffee"></i>
+                                    <span class="nav-item">DAIRY PRODUCTS</span>
+                                </a>
+                            </li>
+                        </div>
+                        <div>
+                            <li>
+                                <a href="#">
+                                    <i class="fas fa-microchip"></i>
+                                    <span class="nav-item">ELECTRONIC ITEMS</span>
+                                </a>
+                            </li>
+                        </div>
+                        <div>
+                            <li>
+                                <a href="#">
+                                    <i class="fas fa-book"></i>
+                                    <span class="nav-item">BOOKS</span>
+                                </a>
+                            </li>
+                        </div>
+                        <div>
+                            <li>
+                                <a href="#">
+                                    <i class="fas fa-cog"></i>
+                                    <span class="nav-item">SETTINGS</span>
+                                </a>
+                            </li>
+                        </div>
+                        <div>
+                            <li>
+                                <a href="#" class="logout">
+                                    <i class="fas fa-sign-out-alt"></i>
+                                    <span class="nav-item">LOGOUT</span>
+                                </a>
+                            </li>
+                        </div>
+                    </ul>
+                </nav>
+            </div>
+            <div class="slide">
+                <div class="slideshow-container">
+                    <div class="mySlides fade">
+                      <div class="numbertext">1 / 6</div>
+                      <img src="/home/karthikeyan/Documents/startup-e-commerce-website/images/img-slide1.png" style="width:100%">
+                      <div class="text"></div>
+                    </div>
+                    <div class="mySlides fade">
+                      <div class="numbertext">2 / 6</div>
+                      <img src="/home/karthikeyan/Documents/startup-e-commerce-website/images/img-slide2.png" style="width:100%">
+                      <div class="text"></div>
+                    </div>
+                    <div class="mySlides fade">
+                      <div class="numbertext">3 / 6</div>
+                      <img src="/home/karthikeyan/Documents/startup-e-commerce-website/images/img-slide3.png" style="width:100%">
+                      <div class="text"></div>
+                    </div>
+                    <div class="mySlides fade">
+                        <div class="numbertext">4 / 6</div>
+                        <img src="/home/karthikeyan/Documents/startup-e-commerce-website/images/img-slide4.png" style="width:100%">
+                        <div class="text"></div>
+                      </div>
+                      <div class="mySlides fade">
+                        <div class="numbertext">5 / 6</div>
+                        <img src="/home/karthikeyan/Documents/startup-e-commerce-website/images/img-slide5.png" style="width:100%">
+                        <div class="text"></div>
+                      </div>
+                      <div class="mySlides fade">
+                        <div class="numbertext">6 / 6</div>
+                        <img src="/home/karthikeyan/Documents/startup-e-commerce-website/images/img-slide6.png" style="width:100%">
+                        <div class="text"></div>
+                      </div>
+                    <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+                    <a class="next" onclick="plusSlides(1)">&#10095;</a>
+                </div>
+                <span class="dot" onclick="currentSlide(1)"></span>
+                <span class="dot" onclick="currentSlide(2)"></span>
+                <span class="dot" onclick="currentSlide(3)"></span>
+                <span class="dot" onclick="currentSlide(4)"></span>
+                <span class="dot" onclick="currentSlide(5)"></span>
+                <span class="dot" onclick="currentSlide(6)"></span>
+            </div>
+            <br>
+            <div class="cards-section">
+                <main class="cards-items">
+                    <div class="row">
+                        <div class="col">
+                            <div class="card card1">
+                                <h2>VEGETABLES</h2>
+                            </div>
+                            <div class="card card2">
+                                <h2>FRUITS</h2>
+                            </div>
+                            <div class="card card3">
+                                <h2>COSMETICS</h2>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col">
+                            <div class="card card4">
+                                <h2>GROCERY</h2>
+                            </div>
+                            <div class="card card5">
+                                <h2>MOBILES & LAPTOPS</h2>
+                            </div>
+                            <div class="card card6">
+                                <h2>FANCY & STATIONERY</h2>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col">
+                            <div class="card card7">
+                                <h2>DAIRY PRODUCTS</h2>
+                            </div>
+                            <div class="card card8">
+                                <h2>ELECTRONIC ITEMS</h2>
+                            </div>
+                            <div class="card card9">
+                                <h2>BOOKS</h2>
+                            </div>
+                        </div>
+                    </div>
+                </main>
+            </div>
+            <div class="footer-section">
+                <footer class="footer">
+                    <div class="container">
+                        <div class="row">
+                            <div class="footer-col">
+                                <h4>COMPANY</h4>
+                                <ul>
+                                    <li>
+                                        <a href="#">About Us</a>
+                                    </li>
+                                    <li>
+                                        <a href="#">Our Services</a>
+                                    </li>
+                                    <li>
+                                        <a href="#">Privacy Policy</a>
+                                    </li>
+                                    <li>
+                                        <a href="#">Affliate Program</a>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="footer-col">
+                                <h4>GET HELP</h4>
+                                <ul>
+                                    <li>
+                                        <a href="#">FAQ</a>
+                                    </li>
+                                    <li>
+                                        <a href="#">Shipping</a>
+                                    </li>
+                                    <li>
+                                        <a href="#">Returns</a>
+                                    </li>
+                                    <li>
+                                        <a href="#">Order Status</a>
+                                    </li>
+                                    <li>
+                                        <a href="#">Payment Options</a>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="footer-col">
+                                <h4>ONLINE SHOP</h4>
+                                <ul>
+                                    <li>
+                                        <a href="#">
+                                            <i class="fas fa-carrot"></i>
+                                            <span class="nav-item">Vegetables</span>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#">
+                                            <i class="fas fa-apple-alt"></i>
+                                            <span class="nav-item">Fruits</span>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#">
+                                            <i class="fas fa-eye"></i>
+                                            <span class="nav-item">Cosmetics</span>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#">
+                                            <i class="fas fa-shopping-cart"></i>
+                                            <span class="nav-item">Grocery</span>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#">
+                                            <i class="fas fa-desktop"></i>
+                                            <span class="nav-item">Mobiles & Laptops</span>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#">
+                                            <i class="fas fa-pen"></i>
+                                            <span class="nav-item">Fancy & Stationery</span>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#">
+                                            <i class="fas fa-coffee"></i>
+                                            <span class="nav-item">Dairy Products</span>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#">
+                                            <i class="fas fa-microchip"></i>
+                                            <span class="nav-item">Electronic Items</span>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#">
+                                            <i class="fas fa-book"></i>
+                                            <span class="nav-item">Books</span>
+                                        </a>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="footer-col">
+                                <h4>FOLLOW US</h4>
+                                <div class="social-links">
+                                    <a href="#"><i class="fab fa-facebook-f"></i></a>
+                                    <a href="#"><i class="fab fa-twitter"></i></a>
+                                    <a href="#"><i class="fab fa-instagram"></i></a>
+                                    <a href="#"><i class="fab fa-linkedin"></i></a>
+                                    <a href="#"><i class="fab fa-whatsapp"></i></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </footer>
+            </div>
+        </main>
+        <script src="/home/karthikeyan/Documents/startup-e-commerce-website/js/threebar_menu.js" async defer></script>
+        <script src="/home/karthikeyan/Documents/startup-e-commerce-website/js/slideshow.js" async defer></script>
+        <script src="/home/karthikeyan/Documents/startup-e-commerce-website/js/sidenavbar_scroll.js" async defer></script>
+    </body>
+</html>
